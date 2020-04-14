@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "cluster97"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "cluster97"
+    spec:
+      containers:
+        - name: "cluster97"
+          image: "udemyml4818172403.azurecr.io/cluster97"
+          ports:
+          - containerPort: 80
